@@ -1,1 +1,65 @@
-<p>survey works!</p>
+<form>
+    <h1>Take our Survey</h1>
+    <h3>Personal Details:</h3>
+ <div class="form">
+<div class="row mb-3">
+    <label for="Surname" class="col-sm-2 col-form-label">Surname</label>
+    <div class="col-sm-10">
+      <input type="Surname" class="form-control">
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <label for="First Name" class="col-sm-2 col-form-label">First name</label>
+    <div class="col-sm-10">
+      <input type="firstName" class="form-control">
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <label for="Contact number" class="col-sm-2 col-form-label">Contact number</label>
+    <div class="col-sm-10">
+      <input type="contactnumber" class="form-control">
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <label for="Date" class="col-sm-2 col-form-label">Date</label>
+    <div class="col-sm-10">
+      <input type="Date" class="form-control">
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <label for="Age" class="col-sm-2 col-form-label">Age</label>
+    <div class="col-sm-10">
+      <input type="Age" class="form-control">
+    </div>
+  </div>
+
+<div class="foodcheckBox">What is your favourite food?(You can choose more than 1 answer)</div>
+       <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+        <label class="form-check-label" for="validationFormCheck1">Pizza</label><br>
+
+        <input type="checkbox" class="form-check-input" id="validationFormCheck2" required>
+        <label class="form-check-label" for="validationFormCheck1">Pasta</label><br>
+
+        <input type="checkbox" class="form-check-input" id="validationFormCheck3" required>
+        <label class="form-check-label" for="validationFormCheck1">Pap and Wors</label><br>
+
+        <input type="checkbox" class="form-check-input" id="validationFormCheck4" required>
+        <label class="form-check-label" for="validationFormCheck1">Chicken stir fry</label><br>
+
+        <input type="checkbox" class="form-check-input" id="validationFormCheck5" required>
+        <label class="form-check-label" for="validationFormCheck1">Beef stir fry</label><br>
+
+        <input type="checkbox" class="form-check-input" id="validationFormCheck6" required>
+        <label class="form-check-label" for="validationFormCheck1">Other</label><br>
+
+       
+  </div>
+ <div class="checkScale"> On a scale of 1 to 5 indicate whether you strongly agree to strongly disagree</div>
+
+ <button class="btn btn-primary"  routerLink="/results"  type="button">Submit</button>
+</form>  
+ 
