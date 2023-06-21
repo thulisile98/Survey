@@ -1,65 +1,122 @@
-<form>
-    <h1>Take our Survey</h1>
-    <h3>Personal Details:</h3>
- <div class="form">
-<div class="row mb-3">
-    <label for="Surname" class="col-sm-2 col-form-label">Surname</label>
-    <div class="col-sm-10">
-      <input type="Surname" class="form-control">
+<form [formGroup]="surveyForm" (ngSubmit)="onSubmit()">
+  <h1>Take our Survey</h1>
+  <h3>Personal Details:</h3>
+
+  <div class="form">
+    <div class="row mb-3">
+      <label for="surname" class="col-sm-2 col-form-label">Surname</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="surname" class="form-control">
+      </div>
     </div>
-  </div>
 
-  <div class="row mb-3">
-    <label for="First Name" class="col-sm-2 col-form-label">First name</label>
-    <div class="col-sm-10">
-      <input type="firstName" class="form-control">
+    <div class="row mb-3">
+      <label for="firstName" class="col-sm-2 col-form-label">First name</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="firstName" class="form-control">
+      </div>
     </div>
-  </div>
 
-  <div class="row mb-3">
-    <label for="Contact number" class="col-sm-2 col-form-label">Contact number</label>
-    <div class="col-sm-10">
-      <input type="contactnumber" class="form-control">
+    <div class="row mb-3">
+      <label for="contactNumber" class="col-sm-2 col-form-label">Contact number</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="contactNumber" class="form-control">
+      </div>
     </div>
-  </div>
 
-  <div class="row mb-3">
-    <label for="Date" class="col-sm-2 col-form-label">Date</label>
-    <div class="col-sm-10">
-      <input type="Date" class="form-control">
+    <div class="row mb-3">
+      <label for="date" class="col-sm-2 col-form-label">Date</label>
+      <div class="col-sm-10">
+        <input type="date" formControlName="date" class="form-control">
+      </div>
     </div>
-  </div>
 
-  <div class="row mb-3">
-    <label for="Age" class="col-sm-2 col-form-label">Age</label>
-    <div class="col-sm-10">
-      <input type="Age" class="form-control">
+    <div class="row mb-3">
+      <label for="age" class="col-sm-2 col-form-label">Age</label>
+      <div class="col-sm-10">
+        <input type="number" formControlName="age" class="form-control">
+      </div>
     </div>
+
+   <div class="foodcheckBox">
+  What is your favorite food? (You can choose more than 1 answer)
+</div>
+<div class="form-check">
+  <input type="checkbox" formControlName="pasta" class="form-check-input">
+  <label for="pasta" class="form-check-label">Pasta</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" formControlName="pizza" class="form-check-input">
+  <label for="pizza" class="form-check-label">Pizza</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" formControlName="papAndWors" class="form-check-input">
+  <label for="papAndWors" class="form-check-label">Pap and Wors</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" formControlName="chickenStirFry" class="form-check-input">
+  <label for="chickenStirFry" class="form-check-label">Chicken Stir Fry</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" formControlName="beefStirFry" class="form-check-input">
+  <label for="beefStirFry" class="form-check-label">Beef Stir Fry</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" formControlName="otherFood" class="form-check-input">
+  <label for="otherFood" class="form-check-label">Other Food</label>
+</div>
+
+    <div class="checkScale">On a scale of 1 to 5, indicate whether you strongly agree to strongly disagree</div>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Strongly Agree (1)</th>
+      <th>Agree (2)</th>
+      <th>Neutral (3)</th>
+      <th>Disagree (4)</th>
+      <th>Strongly Disagree (5)</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr>
+  <th>I like to eat out</th>
+  <td><input type="radio" formControlName="likeToEatOut" value="1"></td>
+  <td><input type="radio" formControlName="likeToEatOut" value="2"></td>
+  <td><input type="radio" formControlName="likeToEatOut" value="3"></td>
+  <td><input type="radio" formControlName="likeToEatOut" value="4"></td>
+  <td><input type="radio" formControlName="likeToEatOut" value="5"></td>
+</tr>
+<tr>
+  <th>I like to watch movies</th>
+  <td><input type="radio" formControlName="likeToWatchMovies" value="1"></td>
+  <td><input type="radio" formControlName="likeToWatchMovies" value="2"></td>
+  <td><input type="radio" formControlName="likeToWatchMovies" value="3"></td>
+  <td><input type="radio" formControlName="likeToWatchMovies" value="4"></td>
+  <td><input type="radio" formControlName="likeToWatchMovies" value="5"></td>
+</tr>
+<tr>
+  <th>I like to watch TV</th>
+  <td><input type="radio" formControlName="likeToWatchTV" value="1"></td>
+  <td><input type="radio" formControlName="likeToWatchTV" value="2"></td>
+  <td><input type="radio" formControlName="likeToWatchTV" value="3"></td>
+  <td><input type="radio" formControlName="likeToWatchTV" value="4"></td>
+  <td><input type="radio" formControlName="likeToWatchTV" value="5"></td>
+</tr>
+<tr>
+  <th>I like to listen to the radio</th>
+  <td><input type="radio" formControlName="likeToListenToRadio" value="1"></td>
+  <td><input type="radio" formControlName="likeToListenToRadio" value="2"></td>
+  <td><input type="radio" formControlName="likeToListenToRadio" value="3"></td>
+  <td><input type="radio" formControlName="likeToListenToRadio" value="4"></td>
+  <td><input type="radio" formControlName="likeToListenToRadio" value="5"></td>
+</tr>
+
+  </tbody>
+</table>
+
+
+    <button class="btn btn-primary" type="submit">Submit</button>
   </div>
+</form>
 
-<div class="foodcheckBox">What is your favourite food?(You can choose more than 1 answer)</div>
-       <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
-        <label class="form-check-label" for="validationFormCheck1">Pizza</label><br>
-
-        <input type="checkbox" class="form-check-input" id="validationFormCheck2" required>
-        <label class="form-check-label" for="validationFormCheck1">Pasta</label><br>
-
-        <input type="checkbox" class="form-check-input" id="validationFormCheck3" required>
-        <label class="form-check-label" for="validationFormCheck1">Pap and Wors</label><br>
-
-        <input type="checkbox" class="form-check-input" id="validationFormCheck4" required>
-        <label class="form-check-label" for="validationFormCheck1">Chicken stir fry</label><br>
-
-        <input type="checkbox" class="form-check-input" id="validationFormCheck5" required>
-        <label class="form-check-label" for="validationFormCheck1">Beef stir fry</label><br>
-
-        <input type="checkbox" class="form-check-input" id="validationFormCheck6" required>
-        <label class="form-check-label" for="validationFormCheck1">Other</label><br>
-
-       
-  </div>
- <div class="checkScale"> On a scale of 1 to 5 indicate whether you strongly agree to strongly disagree</div>
-
- <button class="btn btn-primary"  routerLink="/results"  type="button">Submit</button>
-</form>  
- 
