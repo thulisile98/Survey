@@ -8,12 +8,14 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from './environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    SurveyComponent
+    SurveyComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

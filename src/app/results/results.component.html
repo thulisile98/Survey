@@ -1,21 +1,22 @@
-
+<div class="container">
 <h2>Survey Results</h2>
 
 <p>Total survey number : {{ totalSurveyCount }}</p>
 <p>Oldest age: {{ oldestAge }}</p>
 <p>Youngest age: {{ youngestAge }}</p>
-<p>Average age: {{ averageAge }}</p>
+<p>Average age: {{ averageAge | number:'1.2-2'}}</p>
 <br>
 
-<p>Percentage of Pizza lovers: {{ (pizzaLoversCount / totalSurveyCount) * 100 }}%</p>
-<p>Percentage of Pasta lovers: {{ (pastaLoversCount / totalSurveyCount) * 100 }}%</p>
-<p>Percentage of Pap & wors lovers: {{ (papWorsLoversCount / totalSurveyCount) * 100 }}%</p>
+<p>Percentage of Pizza lovers: {{ (pizzaLoversCount / totalSurveyCount) * 100| number:'1.1-1' }}%</p>
+<p>Percentage of Pasta lovers: {{ (pastaLoversCount / totalSurveyCount) * 100 | number:'1.1-1'}}%</p>
+<p>Percentage of Pap & wors lovers: {{ (papWorsLoversCount / totalSurveyCount) * 100 | number:'1.1-1' }}%</p>
 <br>
-<p>Average rating of people who like to eat out: {{ eatOutAverageRating }}</p>
-<p>Average rating of people who like to watch movies: {{ movieAverageRating }}</p>
-<p>Average rating of people who like to watch TV: {{ tvAverageRating }}</p>
-<p>Average rating of people who like to listen to the radio: {{ radioAverageRating }}</p>
-
-<button class="btn btn-primary" routerLink="/">Ok</button>
-
+<p>Average rating of people who like to eat out: {{ eatOutAverageRating | number:'1.2-2' }}</p>
+<p>Average rating of people who like to watch movies: {{ movieAverageRating | number:'1.2-2' }}</p>
+<p>Average rating of people who like to watch TV: {{ tvAverageRating | number:'1.2-2' }}</p>
+<p>Average rating of people who like to listen to the radio: {{ radioAverageRating | number:'1.2-2'}}</p>
+ <div class="d-grid gap-2 col-3 mx-auto">  
+   <button class="btn btn-outline-dark" routerLink="/">Ok</button>
+  </div>
+</div>
 
