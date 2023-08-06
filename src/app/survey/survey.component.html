@@ -1,6 +1,9 @@
 <div class="container">
 <form [formGroup]="surveyForm" (ngSubmit)="onSubmit()" #f="ngForm">
-  <h1>Take our Survey</h1>
+  <div class="header">
+    <h1>Take our Survey</h1>
+  </div>
+ <div class="contain">
   <h3>Personal Details:</h3>
 
   <div class="form">
@@ -125,6 +128,8 @@
     <button class="btn btn-outline-dark" type="submit">Submit</button>
  </div>
   </div>
+</div>
 </form>
 </div>
+
 
